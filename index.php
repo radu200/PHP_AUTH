@@ -1,3 +1,7 @@
+<?php 
+   require_once './includes/functions.php';
+   loginUser('radu', 'student');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -46,16 +50,15 @@
             <a class="nav-link" href="/admin.php">Admin<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/results/P1results.html">P1 Results<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/results/P1results.php">P1 Results<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/results/DTresults.html">DT Results<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/results/DTresults.php">DT Results<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/results/PfPresults.html">PfP Results<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/results/PfPresults.php">PfP Results<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <a class="p-2" href="register.php">Register</a>
         <a class="p-2" href="login.php">Login</a>
       </div>
     </nav>

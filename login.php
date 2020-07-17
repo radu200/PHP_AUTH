@@ -16,14 +16,14 @@
     <div class="row justify-content-center ">
       <div class="col-sm-3 mt-5">
         <h1 class="pt-2 pb-2 text-center">Login</h1>
-        <form>
+        <form method="post" action="functions.php">
           <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control">
+            <label for="username" >Username</label>
+            <input type="text" class="form-control" name="username" id="uname">
           </div>
           <div class="form-group">
-            <label >Password</label>
-            <input type="password" class="form-control">
+            <label for="password" >Password</label>
+            <input type="password" class="form-control" name="password" id="pwd">
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary w-100">Submit</button>
@@ -32,7 +32,10 @@
       </div>
     </div>
   </div>
-  <?php  echo "Hello World" ?>
+  <?php 
+      require_once './includes/functions.php';
+      processAuth();
+   ?>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
