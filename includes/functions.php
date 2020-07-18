@@ -6,35 +6,35 @@
       echo $role;
     };
 
-    
 
    function getUserName(){
       session_start();
-      if (isset($_SESSION['username'])) {
-        $username = $_SESSION['username'];
+      $username = $_SESSION['username'];
+      if (isset($username)) {
         return $username;  
       };
    }
 
    function checkAuthAdmin(){
         session_start();
-        if (isset($_SESSION['role'])) {
-          $role = $_SESSION['role']; 
+        $role = $_SESSION['role']; 
+        if (isset($role)) {
          return $role  == "admin";
       };
     };
 
    function checkAuthStudent(){
-      session_start();
-      if (isset($_SESSION['role'])) {
-        $role = $_SESSION['role']; 
-       return $role == "student";
+     session_start();
+     $role = $_SESSION['role']; 
+      if (isset($role)) {
+        return $role == "student";
     };
   };
 
   function processAuth(){
       $username = trim($_POST['username']);
       $password = trim($_POST['password']);
+      //get data from text file  and check if credentials exist
       $role = 'admin';
       if($role == 'admin'){
         loginUser($username, $role);

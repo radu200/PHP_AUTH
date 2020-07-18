@@ -14,7 +14,9 @@
 <?php 
     require_once './includes/functions.php';
      $admin = checkAuthAdmin();
-    if ($admin) { ?>
+    if ($admin) {
+      require_once './includes/add_user.php';
+    ?>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,36 +32,45 @@
       <div class="conrainer">
         <div class="row justify-content-center">
           <div class="col-sm-3 mt-5">
+          <div class="alert alert-success" role="alert">
+             <?php echo $successMsg;?>
+          </div>
             <h1 class="pt-2 pb-2 text-center">Add user</h1>
-
-            <form>
-            <div class="form-group">
-                <label>Title</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Surname</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Email address</label>
-                <input type="email" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control">
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary w-100">Add</button>
-              </div>
+            <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                <div class="form-group">
+                    <label for="user_title">Title</label>
+                    <input type="text" name="title" id="user_title" class="form-control"  value="<?php echo $title;?>" >
+                    <span class="text-danger"><?php echo $titleErr;?></span>
+                </div>
+                <div class="form-group">
+                    <label for="fn">First Name</label>
+                    <input type="text" name="firstname" id="fn" class="form-control"  value="<?php echo $firstname;?>">       
+                    <span class="text-danger"><?php echo $firstnameErr;?></span>
+                </div>
+                <div class="form-group">
+                    <label for="ln" >Surname</label>
+                    <input type="text" name="surname" id="ln" class="form-control"  value="<?php echo $surname;?>">
+                    <span class="text-danger"><?php echo $surnameErr;?></span>
+                </div>
+                <div class="form-group">
+                    <label for="email1" >Email address</label>
+                    <input type="email" name="email"  id="email1" class="form-control"  value="<?php echo $email;?>">
+                    <span class="text-danger"><?php echo $emailErr;?></span>
+                </div>
+                <div class="form-group">
+                    <label for="un" >Username</label>
+                    <input type="text" name="username" id="un" class="form-control"  value="<?php echo $username;?>">
+                    <span class="text-danger"><?php echo $usernameErr;?></span>
+                </div>
+                <div class="form-group">
+                    <label for="pws" >Password</label>
+                    <input type="password" name="password" id="psw" class="form-control"  value="<?php echo $password;?>">
+                    <span class="text-danger"><?php echo $passwordErr;?></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="submit_user" class="btn btn-primary w-100">Add</button>
+                </div>
+                
             </form>
           </div>
         </div>
