@@ -1,0 +1,19 @@
+[{
+        "title": "Mr",
+        "firstname": "Rick",
+        "surname": "Bovi",
+        "email": "rick@mail.com",
+        "username": "admin",
+        "password": "dcsadmin01",
+        "role": "admin"
+    },
+    {
+        "title": "Mr",
+        "firstname": "John",
+        "surname": "Doe",
+        "email": "john@mail.com",
+        "username": "john",
+        "password": "john",
+        "role": "student"
+    }
+]

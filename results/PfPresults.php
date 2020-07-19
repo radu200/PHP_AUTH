@@ -23,11 +23,11 @@
 		}
 	</style>
 </head>
-<?php 
-	require_once '../includes/functions.php';
-	$student = checkAuthStudent();
-	
-	if($tudent){ ?>
+<?php
+    require_once "../includes/functions.php";
+    $student = checkAuthStudent();
+    
+    if ($student) { ?>
 		 <body>
 			<h1>Problem Solving for Programming – PfP Results</h1>
 			<table>
@@ -75,7 +75,7 @@
 		</body>
 	<?php
     } else {
-	   header('Location: /login.php');
+        header("Location: /login.php");
     }?>;
 
 </html>
