@@ -1,19 +1,33 @@
 [{
-        "title": "Mr",
-        "firstname": "Rick",
-        "surname": "Bovi",
-        "email": "rick@mail.com",
-        "username": "admin",
-        "password": "dcsadmin01",
-        "role": "admin"
-    },
-    {
-        "title": "Mr",
-        "firstname": "John",
-        "surname": "Doe",
-        "email": "john@mail.com",
-        "username": "john",
-        "password": "john",
-        "role": "student"
-    }
-]
+    "title": "Mr",
+    "firstname": "Rick",
+    "surname": "Bovi",
+    "email": "rick@mail.com",
+    "username": "admin",
+    "password": "dcsadmin01",
+    "role": "admin"
+}, {
+    "title": "Mr",
+    "firstname": "John",
+    "surname": "Doe",
+    "email": "john@mail.com",
+    "username": "john",
+    "password": "root",
+    "role": "student"
+}, {
+    "title": "Mr",
+    "firstname": "radu",
+    "surname": "prodan",
+    "email": "maiL@mail.com",
+    "username": "radu",
+    "password": "radu123",
+    "role": "student"
+}, {
+    "title": "asd",
+    "firstname": "Radu",
+    "surname": "asd",
+    "email": "raduprodan200@gmail.com",
+    "username": "root",
+    "password": "root",
+    "role": "student"
+}]

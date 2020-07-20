@@ -62,16 +62,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+// function test_input($data)
+// {
+//     $data = trim($data);
+//     $data = stripslashes($data);
+//     $data = htmlspecialchars($data);
+//     return $data;
+// }
 
 
-if ($form_is_submitted === true) {
+if ($form_is_submitted === true && $errors_detected === false) {
     $status = createUser($title, $firstname, $surname, $email, $username, $password);
 
     if ($status == 200) {
@@ -79,6 +79,5 @@ if ($form_is_submitted === true) {
     } else {
         $errorMsg = "A error occurred, please try again!";
     }
-    verifyUser($username, $password);
     $title = $firstname = $surname = $email = $username = $password =  "";
 };

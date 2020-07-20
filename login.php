@@ -10,11 +10,6 @@
   <meta name="theme-color" content="#563d7c">
 </head>
 
-<?php
-
-require "./includes/functions.php";
-?>
-
 <body>
   <div class="conrainer">
     <div class="row justify-content-center ">
@@ -24,13 +19,10 @@ require "./includes/functions.php";
           <div class="form-group">
             <label for="username">Username</label>
             <input type="text" class="form-control" name="username" id="uname">
-            <span class="text-danger"><?php echo $usernameErr; ?></span>
-
           </div>
           <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" name="password" id="pwd">
-            <span class="text-danger"><?php echo $passwordErr; ?></span>
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary w-100">Submit</button>
